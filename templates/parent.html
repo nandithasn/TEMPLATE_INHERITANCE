@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Parent</title>
+    {% endblock %}
+    <!-- if iam blocking any content in parent, we need to redefine the same block in child 
+         if i want all the content of parent and i want to add new features in child
+         i need to define  a EMPTY  BODY BLOCK in parent -->
+</head>
+<body>
+    <h1>This is parent line 1 </h1>
+    <h1>this is parent line2 </h1>
+    <!-- here i want only last two lines -->
+     
+    <h1>This is parent line 3 </h1>
+    <h1>this is parent line 4 </h1>
+  <!-- I WANT ALL PROPERTIES OF PARENT -->
+   {% block body_block %}
+   {% endblock %}
+    
+
+</body>
+</html>
